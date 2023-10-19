@@ -24,35 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura da tabela `notes`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `notes` (
   `id` int(11) NOT NULL,
-  `name` varchar(200) NOT NULL,
-  `email` varchar(500) NOT NULL,
-  `pass` varchar(256) NOT NULL,
-  `photo` varchar(600) NOT NULL
+  `titulo` varchar(50) NOT NULL,
+  `nota` varchar(1000) NOT NULL,
+  `cor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `users`
+-- Extraindo dados da tabela `notes`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `pass`, `photo`) VALUES
-(1, 'Renan C.', 'renanc@gmail.com', '312321', 'https://avatars.githubusercontent.com/u/4259630?v=4'),
-(2, 'José', 'jose@gmail.com', '123122321', 'https://avatars.githubusercontent.com/u/118139242?v=4'),
-(3, 'Maria', 'maria@gmail.com', '1231231', 'https://avatars.githubusercontent.com/u/14179725?v=4'),
-(6, 'José Silva', 'jose@mail.com', '123123', 'https://avatars.githubusercontent.com/u/110481359?v=4');
+INSERT INTO `notes` (`id`, `titulo`, `nota`, `cor`) VALUES
+(1, "mercado", "kskjdkdjsjkjfs",);
+(2, "mercado", "kskjdkdjsjkjfs",);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `users`
+-- Índices para tabela `notes`
 --
-ALTER TABLE `users`
+ALTER TABLE `notes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -60,9 +57,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de tabela `users`
+-- AUTO_INCREMENT de tabela `notes`
 --
-ALTER TABLE `users`
+ALTER TABLE `notes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 

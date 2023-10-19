@@ -1,5 +1,5 @@
 {
-  "name": "api-node-express-ads2sem2023",
+  "name": "projeto-final-6sem",
   "version": "1.0.0",
   "description": "API node com Express",
   "main": "src/server.js",
@@ -18,7 +18,7 @@
     "express",
     "restfull"
   ],
-  "author": "Renan Cavichi",
+  "author": "Marielle Garcia",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"

@@ -1,19 +1,19 @@
-import user from '../../models/userModel.js'
+import note from '../../models/noteModel.js'
 import zodErrorParser from '../../helpers/zodErrorParser.js'
 
-const getUser = async (req, res)=>{   
+const getNote = async (req, res)=>{   
     try {
-        const userValidated = user.validadeIdUser(req.body)
-        if(userValidated.success === false){
-            const zodError = zodErrorParser(userValidated.error)
+        const noteValidated = note.validadeIdNote(req.body)
+        if(noteValidated.success === false){
+            const zodError = zodErrorParser(noteValidated.error)
             return res.status(400).json({
                 error: 'Dados inválidos',
                 fields: zodError
             })
         }
-        const [rows, fields] = await user.get(userValidated.data.id)
+        const [rows, fields] = await note.get(noteValidated.data.id)
         if (rows.length === 0) {
-            res.status(404).json({message: 'User not found'})
+            res.status(404).json({message: 'Nota não encontrada.'})
         } else {
             delete rows[0].pass
             res.json(rows[0])
@@ -24,4 +24,4 @@ const getUser = async (req, res)=>{
     }
 }
 
-export default getUser
+export default getNote
