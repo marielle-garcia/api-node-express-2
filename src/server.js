@@ -6,8 +6,7 @@ import cors from 'cors'
 import {PORT} from './config.js'
 import logger from './middlewares/logger.js'
 
-import userRoute from './router/userRoute.js'
-import productRoute from './router/productRoute.js'
+import noteRoute from './router/noteRoute.js'
 
 const api = express()
 
@@ -30,8 +29,7 @@ api.get('/', (req, res)=>{
     res.json({message: "Bem-vindo a API"})
 })
 
-api.use('/user', userRoute)
-api.use('/product', productRoute) 
+api.use('/note', noteRoute)
 
 api.post('/whoiam', (req, res) => {
     res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains, origin: 'origin- '+req.get('origin') + req.origin, headerOrigin: req.headers.origin })

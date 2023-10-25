@@ -3,15 +3,10 @@ import zodErrorParser from '../../helpers/zodErrorParser.js'
 
 const createNote = async (req, res) => {
     try{
-        const noteValidated = note.validateCreateNote(req.body)
-        if(noteValidated.success === false){
-            const zodError = zodErrorParser(noteValidated.error)
-            return res.status(400).json({
-                error: 'Dados inválidos',
-                fields: zodError
-            })
-        }
-        const [result] = await note.create(noteValidated.data)
+        const noteData = req.body
+        
+        const [result] = await note.create(noteData)
+        console.log(result)
         if(result.affectedRows === 1) {
 
             const newNote = req.body

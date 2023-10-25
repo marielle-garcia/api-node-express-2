@@ -21,7 +21,11 @@ SET time_zone = "+00:00";
 -- Banco de dados: `api-node`
 --
 
+-- Banco de dados: `api-node`
+--
+-- create database api_node;
 -- --------------------------------------------------------
+-- use api_node;
 
 --
 -- Estrutura da tabela `notes`
