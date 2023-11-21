@@ -9,7 +9,8 @@ CREATE TABLE `notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `notes` (`id`, `titulo`, `nota`, `cor`) VALUES
-(1, "mercado", "kskjdkdjsjkjfs","#FFFFFF"),
+(1, "mercado", "
+","#FFFFFF"),
 (2, "mercado", "kskjdkdjsjkjfs","#FFFFFF");
 
 SELECT * FROM NOTES;
