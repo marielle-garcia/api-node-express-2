@@ -1,5 +1,5 @@
 // const express = require('express')
-import express from 'express'
+const express = require('express');
 import bodyParser from 'body-parser'
 import cors from 'cors'
 
@@ -8,7 +8,7 @@ import logger from './middlewares/logger.js'
 
 import noteRoute from './router/noteRoute.js'
 
-const express = require('express');
+
 
 const api = express()
 
