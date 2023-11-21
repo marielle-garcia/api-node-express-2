@@ -8,6 +8,8 @@ import logger from './middlewares/logger.js'
 
 import noteRoute from './router/noteRoute.js'
 
+const express = require('express');
+
 const api = express()
 
 
