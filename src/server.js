@@ -1,8 +1,8 @@
 // const express = require('express')
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
-import cors from 'cors'
 
 import {PORT} from './config.js'
 import logger from './middlewares/logger.js'
@@ -13,7 +13,7 @@ import noteRoute from './router/noteRoute.js'
 
 const api = express()
 
-
+api.use(cors())
 
 // Middlewares
 api.use(logger)
@@ -26,7 +26,7 @@ api.options('/whoiam', (req, res) => {
     res.send('ok');
 });
 
-api.use(cors())
+
 
 api.get('/', (req, res)=>{   
     res.json({message: "Bem-vindo a API"})
