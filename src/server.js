@@ -1,6 +1,7 @@
 // const express = require('express')
 const express = require('express');
-import bodyParser from 'body-parser'
+const bodyParser = require('body-parser');
+
 import cors from 'cors'
 
 import {PORT} from './config.js'
@@ -16,7 +17,7 @@ const api = express()
 
 // Middlewares
 api.use(logger)
-api.use(bodyParser.json())
+api.use(express.json());
 
 api.options('/whoiam', (req, res) => {
     var origin = req.get('origin');
