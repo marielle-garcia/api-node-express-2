@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express'
 
 import listNotes from '../controllers/note/listNotes.js'
 import getNote from '../controllers/note/getNote.js'

@@ -1,13 +1,4 @@
-import mysql from 'mysql2/promise' 
+import postgres from "pg";
 
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '1234',
-  database: 'api_node',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-})
 
-export default pool
+export const conn = new postgres.Client('postgres://api_node:PpKFD7vCvGBjVldr1AMO8dUxQBwI5ov0@dpg-clgikqeg1b2c73a90ud0-a.oregon-postgres.render.com/api_node_c9yc?ssl=true');
