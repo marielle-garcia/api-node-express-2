@@ -4,7 +4,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '1234',
-  database: 'api_node',
+  database: 'api_node_versao2',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0

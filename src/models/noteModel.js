@@ -10,13 +10,13 @@ const list = async () => {
 }
 
 const create = async (note) => {
-    const {titulo, nota, cor} = note
-    return await db.query(`INSERT INTO notes (titulo, nota, cor) VALUES ('${titulo}', '${nota}', '${cor}');`)
+    const {title, notes, variant} = note
+    return await db.query(`INSERT INTO notes (title, notes, variant) VALUES ('${title}', '${notes}', '${variant}');`)
 }
 
 const update = async (note) => {
-    const {id, titulo, nota, cor} = note
-    return await db.query(`UPDATE notes SET titulo = '${titulo}', nota = '${nota}', cor = '${cor}' WHERE id = '${id}';`)
+    const {id, title, notes, variant} = note
+    return await db.query(`UPDATE notes SET title = '${title}', notes = '${notes}', variant = '${variant}' WHERE id = '${id}';`)
 }
 
 const remove = async (id) => {
